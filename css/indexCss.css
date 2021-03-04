@@ -61,7 +61,7 @@ nav {
 
 .link {
   align-items: center;
-  width: 40%;
+  width: 30%;
 }
 .link .nav_link {
   display: flex;
@@ -552,6 +552,18 @@ main {
 .container_contact .btnSayHello button:hover {
   transform: scale(1.1);
   transition: all 0.1s ease-in-out;
+}
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 70px;
+  background-color: var(--blue-color-b);
+  color: var(--white-color);
+  font-size:var(--font-body) ;
+  font-family: var(--body-font);
+  
 }
 
 /*----------------------------------------------------------------------------------------------------------------*/
