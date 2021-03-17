@@ -18,6 +18,7 @@
 
   --font-nav:18px;
   --font-bigtitle:70px;
+  --font-title:40px;
   --font-body:16px;
   --font-body-list:13px;
   --font-button:19px;
@@ -39,106 +40,6 @@ button {
 ul{
   list-style: none;
 }
-nav {
-  margin: 0 auto;
-  padding: 0 60px;
-  position: fixed;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 8vh;
-  font-family: var(--body-font);
-  background-color: var(--blue-color);
-  border-bottom: 2px solid var(--blue-color-c);
-  z-index: 2;
-}
-.logo {
-  color: var(--white-color);
-  font-size: 25px;
-  cursor: pointer;
-}
-
-.link {
-  align-items: center;
-  width: 30%;
-}
-.link .nav_link {
-  display: flex;
-  justify-content: space-between;
-}
-.link .nav_link li {
-  font-size: var(--font-nav);
-}
-.link .nav_link li .btnContact {
-  padding: 3px 20px;
-  border-radius: 9px;
-  border: 4px solid var(--red-color);
-  transition: all 0.2s ease-in-out;
-}
-.link .nav_link li .btnContact:hover {
-  background-color: var(--red-color);
-  color: var(--white-color);
-  transition: all 0.2s ease-in-out;
-}
-.link .nav_link a:hover,
-.active {
-  color: var(--yellow-color);
-  transition: all 0.2s ease-in-out;
-}
-
-/*Hamburger*/
-
-.menu-btn {
-  position: relative;
-  /* display: inline-flex;*/
-  display: none;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
-}
-.menu-btn__burger {
-  width: 30px;
-  height: 3px;
-  background-color: var(--white-color);
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
-  transition: all 0.5s ease-in-out;
-}
-.menu-btn__burger::before,
-.menu-btn__burger::after {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 3px;
-  background-color: var(--white-color);
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
-  transition: all 0.5s ease-in-out;
-}
-.menu-btn__burger::before {
-  transform: translateY(-10px);
-}
-.menu-btn__burger::after {
-  transform: translateY(10px);
-}
-/*Animation*/
-.menu-btn.open .menu-btn__burger {
-  transform: translateX(-50px);
-  background: transparent;
-  box-shadow: none;
-}
-.menu-btn.open .menu-btn__burger::before {
-  transform: rotate(45deg) translate(35px, -35px);
-}
-.menu-btn.open .menu-btn__burger::after {
-  transform: rotate(-45deg) translate(35px, 35px);
-}
-/*Hamburger END*/
-
 main {
   width: 100%;
   height: 100%;
@@ -396,7 +297,7 @@ main {
 
 /*----------------------My Work-------------*/
 .container_Work{
-  padding: 60px 30px 30px;
+  padding: 60px 80px 80px;
   margin: 0 auto;
   width: 100%;
   height: 700px;
@@ -429,8 +330,8 @@ main {
 .container_Work .grid_work .row_work_project{
   padding: 40px 0;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "project1";
+  grid-template-columns: auto auto auto;
+  grid-template-rows:  auto ;
   justify-items: center;
 }
 .container_Work .grid_work .row_work_project a .project1{
@@ -457,7 +358,7 @@ main {
   height: 100%;
   position: absolute;
   top: 100%;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -472,11 +373,12 @@ main {
 .container_Work .grid_work .row_work_project a .project1 .detailProject p{
   color: var(--blue-color);
   font-family: var(--body-font);
-  font-weight: var(--font-body);
+  font-weight: var(--font-medium);
   user-select: none;
 
 }
-.container_Work .grid_work .row_work_project a .project1 .detailProject p:nth-child(1){
+.container_Work .grid_work .row_work_project a .project1 .detailProject p:nth-child(1), 
+.container_Work .grid_work .row_work_project a .project1 .detailProject .titledetail{
   font-weight: var(--font-bold);
   margin-bottom: 10px;
 
@@ -494,7 +396,7 @@ main {
   justify-content: center;
 }
 .btnSeeMore button{
-  display: none;/*------------------------------------------*/
+  /*display: none;/*------------------------------------------*/
   background-color: var(--red-color);
   border: none;
   padding: 10px 20px;
@@ -553,64 +455,11 @@ main {
   transform: scale(1.1);
   transition: all 0.1s ease-in-out;
 }
-footer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  height: 70px;
-  background-color: var(--blue-color-b);
-  color: var(--white-color);
-  font-size:var(--font-body) ;
-  font-family: var(--body-font);
-  
-}
+
 
 /*----------------------------------------------------------------------------------------------------------------*/
-@media screen and (max-width: 1024px) {
-  nav {
-    z-index: 1;
-    padding: 0 30px;
+@media screen and (max-width: 1090px) {
 
-  }
-  .link {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: -100%;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    margin: 0 auto;
-    padding: 40px 0 0;
-    background-color: var(--blue-color);
-    transition: 0.4s;
-    z-index: -1;
-  }
-
-  .link .nav_link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 30%;
-  }
-  .link .nav_link li:nth-child(4) {
-    margin-bottom: 40px;
-  }
-  .link .nav_link li {
-    font-size: 2vw;
-  }
-  .link .nav_link li:not(:nth-child(1)) {
-    margin-top: 30%;
-  }
-  /* Show menu */
-  .show-menu {
-    top: 40px;
-  }
-  .menu-btn {
-    display: inline-flex;
-  }
   .container_home {
     display: flex;
     justify-content: center;
@@ -743,6 +592,7 @@ footer{
   width: 200px;
 }
 .container_about .row_inside .col_inside_about_s{
+ 
   grid-area: detail;
   align-self: center;
   display: flex;
@@ -758,7 +608,7 @@ footer{
   color: var(--white-color);
   padding: 15px;
   background-color: var(--blue-color-b);
-  width: 200px;
+  width: 400px;
   height: auto;
   border-radius: 5px;
 }
@@ -803,10 +653,20 @@ footer{
 }
 
 /*-------------WORK--------------------------*/
+.container_Work .grid_work .row_work_project{
+  grid-template-columns: auto ;
+  grid-template-rows:  auto auto auto ;
+  row-gap: 20px;
+}
+
+.container_Work .grid_work .row_work_project a .project1{
+  width: 200px;
+  height: 300px;
+}
 
 .container_Work{
 
-  height: 550px;
+  height: auto;
 
 }
 

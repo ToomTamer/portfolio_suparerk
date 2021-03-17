@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap");
+:root{
+    /*color*/
+    --blue-color: #353353;
+    --blue-color-b: #302f4e;
+    --blue-color-c: #4a4865;
+    --yellow-color: #ffd15c;
+    --red-color: #ff4c60;
+    --blue-sky-color: #6c6ce5;
+    --white-color: #ffffff;
+    --gray-color:  #454360;
+   
+    /*font*/
+    --body-font: "Rubik", sans-serif;
+    --font-medium: 500;
+    --font-bold: 700;
+  
+    --font-nav:18px;
+    --font-bigtitle:70px;
+    --font-subbigtitle:40px;
+    --font-title:20px;
+    --font-body:16px;
+    --font-body-list:13px;
+    --font-button:19px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+.title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: var(--font-subbigtitle);
+    font-family: var(--body-font);
+    color: var(--white-color);
+}
+
+.underLineWork{
+    content: "";
+    margin: 10px auto 0 auto; 
+    height: 6px;
+    width: 220px;
+    border-radius: 20px;
+    background-color: var(--blue-sky-color);
+}
+
+.project{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 700px;
+    background-color: var(--blue-color);
+}
+
+.grid-container{
+    display: grid;
+    margin-top:1.5vw ;
+    grid-template-columns:  auto auto auto ;
+    grid-template-rows:  auto ;
+    height: fit-content;
+    display: flex;
+    grid-gap: 1.5vw;
+    flex-direction: row;
+
+}
+
+.project .grid-container .grid-item{
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+    filter: opacity(90%);
+    transition: .2s ease-in-out
+}
+.project .grid-container .grid-item:hover{
+    filter: opacity(100%);
+    transform: translateY(-5px);
+    transition: .2s ease-in-out
+}
+.caption-bg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--yellow-color);
+}
+.caption{
+    color: var(--blue-color);
+    font-family: var(--body-font);
+    font-weight: var(--font-bold);
+    font-size: var(--font-title);
+    user-select: none;
+}
+
+@media screen and (max-width: 1090px) {
+
+    .grid-container{
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns:  auto auto auto ;
+        grid-template-rows:  auto ;
+        height: fit-content;
+        display: flex;
+        grid-gap: 1.5vw;
+        flex-direction: column;
+    
+    }
+
+    .project .grid-container .grid-item{
+        width: 300px;
+        height: 200px;
+    }
+
+    .project{
+        height: 1200px;
+
+    }
+}

@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+:root{
+    /*color*/
+    --blue-color: #353353;
+    --blue-color-b: #302f4e;
+    --blue-color-c: #4a4865;
+    --yellow-color: #ffd15c;
+    --red-color: #ff4c60;
+    --blue-sky-color: #6c6ce5;
+    --white-color: #ffffff;
+    --gray-color:  #454360;
+   
+    /*font*/
+    --body-font: "Rubik", sans-serif;
+    --body-font-b: 'Kanit', sans-serif;;
+    --font-medium: 500;
+    --font-bold: 700;
+  
+    --font-nav:18px;
+    --font-bigtitle:70px;
+    --font-subbigtitle:40px;
+    --font-title:30px;
+    --font-body:16px;
+    --font-body-list:13px;
+    --font-button:19px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+.codingpage{
+    width: 100%;
+    height: auto;
+    background-color: var(--blue-color);
+}
+
+.bannertop{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue-color-b);
+    font-size: var(--font-bigtitle);
+    font-family: var(--body-font);
+    color: var(--white-color);
+}
+
+.titlepage{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: var(--font-subbigtitle);
+    font-family: var(--body-font);
+    color: var(--white-color);
+}
+
+.containerA{
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    padding: 60px 80px 80px;
+    width: 100%;
+    height: auto;
+    background-color: var(--blue-color-c);
+}
+
+.underLineWork{
+    content: "";
+    margin: 20px auto 0 auto; 
+    height: 6px;
+    width: 220px;
+    border-radius: 20px;
+    background-color: var(--blue-sky-color);
+}
+
+video{
+    margin-top: 60px;
+    width: 400;
+    height: 300;
+}
+
+.captionvideo{
+    margin-top: 20px;
+    width: 100%;
+    font-size: var(--font-body);
+    font-family: var(--body-font-b);
+    color: var(--white-color);
+}
+.subtitle{
+    margin-top: 40px;
+    width: auto;
+    font-size: var(--font-title);
+    font-family: var(--body-font);
+    color: var(--white-color);
+}
+.detail{
+    margin-top: 20px;
+    width: auto;
+    font-size: var(--font-body);
+    font-family: var(--body-font);
+    color: var(--white-color);
+}
+
+.img-interface{
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.img-interface img{
+    border-radius: 20px;
+    object-fit: cover;
+    width: 300px;
+    height: 400px;
+}

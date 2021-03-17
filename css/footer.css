@@ -1,0 +1,13 @@
+footer{
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 70px;
+    background-color: var(--blue-color-b);
+    color: var(--white-color);
+    font-size:var(--font-body) ;
+    font-family: var(--body-font);
+    
+  }
