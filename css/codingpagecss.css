@@ -21,6 +21,7 @@
     --font-bigtitle:70px;
     --font-subbigtitle:40px;
     --font-title:30px;
+    --font-title-b:25px;
     --font-body:16px;
     --font-body-list:13px;
     --font-button:19px;
@@ -81,10 +82,10 @@
     background-color: var(--blue-sky-color);
 }
 
-video{
+iframe{
+    width: 560px;
+    height: 315px;
     margin-top: 60px;
-    width: 400;
-    height: 300;
 }
 
 .captionvideo{
@@ -122,4 +123,48 @@ video{
     object-fit: cover;
     width: 300px;
     height: 400px;
+}
+
+@media screen and (max-width: 1090px) {
+
+    .bannertop{
+        
+        font-size: var(--font-subbigtitle);
+
+    }
+    
+    .titlepage{
+
+        font-size: var(--font-title);
+    }
+
+    .underLineWork{
+        content: "";
+        margin: 20px auto 0 auto; 
+        height: 4px;
+        width: 160px;
+        border-radius: 20px;
+        background-color: var(--blue-sky-color);
+    }
+
+    iframe{
+        width: 460px;
+        height: 315px;
+    }
+    .subtitle{
+        font-size: var(--font-title-b);
+    }
+
+    .img-interface{
+
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .img-interface img{
+        margin-top: 40px;
+        width: 200px;
+        height: 300px;
+    }
 }
